@@ -1,0 +1,27 @@
+<!-- 1.image的基本使用 -->
+<!-- 
+  重点：
+    1.image组件可以写成单标签，也可以修成双标签 
+    2.image组件默认有自己的大小: 320x240
+    3.image组件是一个行内块级元素(inline-block)
+-->
+
+<!-- 2.src: 本地路径(相对路径/绝对路径)/远程地址 -->
+<image src="/assets/test/liuziding.jpg" />
+<image  src="https://raw.githubusercontent.com/coderwhy/LearnMiniProgram/06_%E5%B8%B8%E8%A7%81%E7%9A%84%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6/assets/test/coderwhy.jpeg" />
+
+<!-- 补充：相册中的图片 -->
+<button bindtap="handleChooseAlbum">选中图片</button>
+
+<image src="{{imagePath}}" />
+
+<!-- 3.bindload: 监听图片加载完成 -->
+<!-- lazy-load: 图片的懒加载 -->
+<image wx:for="{{10}}" src="https://raw.githubusercontent.com/coderwhy/LearnMiniProgram/06_%E5%B8%B8%E8%A7%81%E7%9A%84%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6/assets/test/coderwhy.jpeg" 
+bindload="handleImageLoad" 
+lazy-load />
+
+<!-- 4.show-menu-by.longpress: 长按图片出现识别小程序码 -->
+<image show-menu-by-longpress src="/assets/test/liuziding.jpg" />
+
+

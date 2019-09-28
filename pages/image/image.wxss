@@ -1,0 +1,7 @@
+/* pages/image/image.wxss */
+imput {
+  border: 1px solid red;
+  margin: 10px 30px;
+}
+
+
