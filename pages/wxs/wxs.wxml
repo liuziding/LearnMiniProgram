@@ -1,0 +1,16 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 错误的写法 -->
+<!-- <view>{{25.3454654646.toFixed(2)}}</view> -->
+
+<!-- 2.2.定义在单独的wxs文件中，再使用<wxs>标签进行导入 -->
+<!-- 不能使用绝对路径，必须使用相对路径 -->
+<wxs src="../../wxs/filters.wxs" module="filte" />
+<view>{{filte.message}}</view>
+<view>{{filte.name}}</view>
+<view>{{filte.sum(30, 70)}}</view>
+<view>{{filte.priceFixed(20.444444444444444444444)}}</view>
+<view>{{filte.priceFixed(price, 3)}}</view>
+<view>{{filte.dateFormat(time, 'yyyy-MM-dd hh:mm:ss')}}</view>
+<view>{{filte.dateFormat(time, 'yyyy/MM/dd')}}</view>
+
+

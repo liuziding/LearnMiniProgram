@@ -1,6 +1,18 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
+<include src="/wxml/header.wxml" />
 
-<view>1.知识点1</view>
-<view>哈哈哈哈哈</view>
+
+<test id="content" selectable class="title">Hello World</test>
+<button id="" size="mini">按钮</button>
+<view id=""></view>
+<scroll-view id=""></scroll-view>
+
+<!-- 1.hidden属性 -->
+<view hidden="">哈哈哈1</view>
+<button hidden>哈哈哈2</button>
+<button hidden="{{true}}">哈哈哈</button>
+
+<import src="/wxml/template.wxml" />
+
+<include src="/wxml/footer.wxml" />
+
