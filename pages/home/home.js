@@ -1,66 +1,63 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    titles: ['衣服', '裤子', '鞋子']
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleBtnClick() {
+    console.log('按钮发生点击')
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleTouchStart() {
+    console.log('handleTouchStart')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleTouchMove() {
+    console.log('handleTouchMove')
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleTouchEnd() {
+    console.log('handleTouchEnd')
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleTap() {
+    console.log('handleTap')
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handleLongPress() {
+    console.log('handleLongPress')
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleEventClick(event) {
+    console.log('------------', event)
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleEventend(event) {
+    console.log('++++++++', event)
+  },
+  handleInner(event) {
+    console.log(event)
+  },
+  bindOuter(event) {
+    console.log(event)
+  },
+  handleItemClick(event) {
+    const dataset = event.currentTarget.dataset;
+    const index = dataset.index;
+    const item = dataset.item;
+    console.log(index, item);
+  },
+  // 事件冒泡和事件捕获
+  handleCaptureView1() {
+    console.log('handleCaptureView1');
+  },
+  handleBindView1() {
+    console.log('handleBindView1');
+  },
+  handleCaptureView2() {
+    console.log('handleCaptureView2');
+  },
+  handleBindView2() {
+    console.log('handleBindView2');
+  },
+  handleCaptureView3() {
+    console.log('handleCaptureView3');
+  },
+  handleBindView3() {
+    console.log('handleBindView3');
   }
 })
+
+
