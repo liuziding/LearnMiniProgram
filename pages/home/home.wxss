@@ -3,3 +3,15 @@
   color: red;
   font-size: 30px;
 }
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+.green {
+  color: green;
+}
+.cpn {
+  margin-top: 20rpx;
+}

@@ -2,5 +2,58 @@
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
 
-<view>1.知识点1</view>
-<view>哈哈哈哈哈</view>
+<!-- 1.使用自定义的组件 -->
+<!-- <my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<my-cpn /> -->
+
+<!-- 2.自定义组件的样式细节 -->
+<!-- <my-style /> -->
+
+<!-- 3.给我们自定义组件传递数据 / 传递样式 -->
+<my-prop title="哈哈" titleclass="red" />
+<my-prop title="嘿嘿" titleclass="green" />
+<my-prop titleclass="blue" />
+
+<!-- 4.组件内部发出事件 -->
+<view>当前计数：{{counter}}</view>
+<my-event bind:increment="handleIncrement"          bind:decrement="handleDecrement" />
+
+<!-- 5.tab-control的练习 -->
+<my-tab-control titles="{{['衣服', '裤子', '鞋子', '帽子']}}" 
+                bind:itemclick="handleTabClick" />
+<view><br /></view>
+<!-- 6.直接选中组件修改数据 / 调用方法 -->
+<button size="mini" bind:tap="handleIncrementCpn" class="cpn">修改组件内的数据+</button>
+<button size="mini" bind:tap="handleDecrementCpn" class="cpn">修改组件内的数据-</button>
+<my-sel class="sel-class" id="sel-id" />
+
+<!-- 7. 插槽的使用 -->
+<!-- 7.1 单个插槽的使用 -->
+<my-slot>
+  <button size="mini">我是插槽的按钮</button>
+</my-slot>
+<my-slot>
+  <text>嘿嘿嘿嘿嘿嘿</text>
+</my-slot>
+
+<my-slot>
+  <image src="http://static.runoob.com/images/demo/demo1.jpg" />
+</my-slot>
+<my-slot>
+  <slider value="{{sliNum}}"></slider>
+</my-slot>
+
+<!-- 7.2 多个插槽的使用 -->
+<!-- 
+  注意事项：
+    1.给每一个插槽一个名字: name属性
+    2.必须在Component对象中添加一个选项：options -> multipleSlots:true
+ -->
+<my-mslot>
+  <button size="mini" slot="slot2">我是出入的按钮</button>
+  <slider slot="slot1"></slider>
+</my-mslot>
+
+
+

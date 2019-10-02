@@ -1,66 +1,62 @@
-// pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    counter: 0,
+    inNum: 20,
+    deNum: 10,
+    sliNum: 0,
+    onOff: true
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    setInterval(() => {
+      if(this.data.onOff) {
+        if (this.data.sliNum < 100) {
+          this.setData({
+            sliNum: this.data.sliNum + 1
+          })
+        } else {
+          this.setData({
+            onOff: false
+          })
+        }
+      } else {
+        if (this.data.sliNum > 0) {
+          this.setData({
+            sliNum: this.data.sliNum - 1
+          })
+        } else {
+          this.setData({
+            onOff: true
+          })
+        }
+      } 
+    }, 100)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleIncrement(event) {
+    console.log('--------', event)
+    this.setData({
+      counter: this.data.counter + 1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleDecrement(event) {
+    this.setData({
+      counter: this.data.counter - 1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleTabClick(event) {
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleIncrementCpn() {
+    // 最终目的：修改 my-sel 中的counter
+    // 1.获取组件对象
+    const my_sel = this.selectComponent('.sel-class')
+    // 2. 通过 setData修改组件中的数组（不合理）
+    // my_sel.setData({
+    //   counter: my_sel.data.counter + 10
+    // })
+    // 3. 通过方法对数据进行修改
+    my_sel.incrementCounter(this.data.inNum);
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleDecrementCpn() {
+    this.selectComponent('.sel-class').decrementCounter(this.data.deNum);
   }
 })
