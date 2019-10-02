@@ -2,5 +2,41 @@
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
 
-<view>1.知识点1</view>
-<view>哈哈哈哈哈</view>
+<!-- 1. Toast -->
+<button bind:tap="handleShowToast">showToast</button>
+
+<!-- 2. Model -->
+<button bind:tap="handleShowModal">showModal</button>
+
+<!-- 3. Loading -->
+<button bind:tap="handleShowLoading">showLoading</button>
+
+<!-- 4. actionSheet -->
+<button bind:tap="handleShowactionSheet">showactionSheet</button>
+
+<!-- 5. 分享 -->
+<button open-type="share">分享</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
