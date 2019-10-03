@@ -1,3 +1,12 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "my-goods": "/components/my-goods/my-goods",
+    "my-swiper": "/components/my-swiper/my-swiper",
+    "my-back-top": "/components/my-back-top/my-back-top",
+    "my-tab-control": "/components/my-tab-control/my-tab-control",
+    
+    "h-popular": "./childCpns/h-popular/h-popular",
+    "h-recommend": "./childCpns/h-recommend/h-recommend"
+  },
+  "navigationBarTitleText": "定定小程序"
 }
